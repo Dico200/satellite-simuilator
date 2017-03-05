@@ -11,13 +11,13 @@
 }
 
 .text-field {
-	-fx-background-color: #2A5058, gray;
-	-fx-text-fill: black;
-	-fx-font-family: "Arial Narrow";
-	-fx-font-size: 13px;
-	-fx-font-weight: bold;
+    -fx-background-color: #2A5058, gray;
+    -fx-text-fill: black;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
 }
 
 .text-field.error {
-  -fx-background-color: red, gray;
+    -fx-background-color: red, gray;
 }
