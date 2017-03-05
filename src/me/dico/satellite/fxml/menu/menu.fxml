@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="me.dico.satellite.fxml.menu.Controller">
+  <children>
+    <ImageView id="menu_background.png" fitHeight="400.0" fitWidth="600.0" layoutX="0.0" layoutY="0.0">
+      <image>
+        <Image url="@menu_background.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <bottom>
+        <Region prefHeight="99.0" prefWidth="600.0" />
+      </bottom>
+      <center>
+        <VBox prefHeight="186.0" prefWidth="280.0" spacing="5.0">
+          <children>
+            <TextField fx:id="username" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" opacity="1.0" prefWidth="-1.0" text="Username:" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="departureRadius" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" opacity="1.0" prefWidth="-1.0" text="Starting radius: 7e6" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="arrivalRadius" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" opacity="1.0" prefWidth="-1.0" text="Target radius: 3e7" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="attempts" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" opacity="1.0" prefWidth="-1.0" text="Number of attempts: 10" VBox.vgrow="ALWAYS" />
+            <Button id="play-button" fx:id="playButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" opacity="1.0" text="Play!" textAlignment="CENTER" wrapText="false" VBox.vgrow="ALWAYS" />
+          </children>
+          <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+          </padding>
+        </VBox>
+      </center>
+      <left>
+        <Region prefHeight="0.0" prefWidth="160.0" />
+      </left>
+      <right>
+        <Region prefHeight="0.0" prefWidth="160.0" />
+      </right>
+      <top>
+        <Region prefHeight="106.0" prefWidth="600.0" />
+      </top>
+    </BorderPane>
+  </children>
+  <stylesheets>
+    <URL value="@menu.css" />
+  </stylesheets>
+</AnchorPane>

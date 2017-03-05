@@ -1,0 +1,60 @@
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+.button.no-attempts {
+    -fx-background-color: linear-gradient(#dd2222, #aa0000);
+}
+.button.no-attempts:hover {
+    -fx-background-color: linear-gradient(#aa0000, #dd2222);
+}
+
+.toggle-button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#b1a261, #58502A);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+.toggle-button:hover {
+    -fx-background-color: linear-gradient(#58502A, #b1a261);
+}
+
+#start-error-text {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-fill: firebrick;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 0, 0, 0, 1);
+}
+
+#simulator-settings-title {
+   -fx-font-size: 15px;
+   -fx-font-family: "Arial Black";
+   -fx-fill: #818181;
+   -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.7), 6, 0.0, 0, 2);
+}
+
+.label {
+    -fx-text-fill: #3672a2;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(54, 114, 178, 0.4), 4, 0.0, 0, 2);
+}
+
+.text-field {
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-text-fill: #645634;
+}
+
+.text-field.error {
+  -fx-text-box-border: red;
+  -fx-focus-color: red;
+}
