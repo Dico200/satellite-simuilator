@@ -60,7 +60,7 @@ public class CanvasGrapher {
 			cp = getCirclePoints(6378100);
 			context.drawImage(earthImage, cp[0], cp[1], cp[2], cp[3]);
 			log("Earth drawn");
-			//this.satSize = cp[2] / 3; //Sets a satellite size to a fifth of the earths size (abnormal of course, it's a simulation.)
+			//this.satSize = cp[2] / 5; //Sets a satellite size to a fifth of the earths size (abnormal of course, it's a simulation.)
 			
 			context.stroke();
 			
@@ -87,9 +87,6 @@ public class CanvasGrapher {
 			context.stroke();
 			
 			log("CanvasX: " + (int)cx + ", CanvasY: " + (int)cy);
-			
-			//context.drawImage(satelliteImage, cx - (satSize/2), (cy - satSize/2), satSize, satSize);
-			//log(String.format("Satellite image location: %.2f, %.2f, %.2f, %.2f", cx - (satSize/2), (cy - satSize/2), satSize, satSize));
 		});
 	}
 	

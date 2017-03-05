@@ -1,6 +1,9 @@
 package me.dico.satellite.simulation.graphing;
 
-public class Point {
+import java.io.Serializable;
+
+public class Point implements Serializable {
+	private static final long serialVersionUID = -1752862247964753052L;
 	
 	private double t, x, y, r, v;
 	
@@ -33,4 +36,3 @@ public class Point {
 	}
 
 }
-

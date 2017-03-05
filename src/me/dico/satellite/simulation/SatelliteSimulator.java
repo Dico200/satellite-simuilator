@@ -97,6 +97,10 @@ public class SatelliteSimulator extends Simulator {
 			points.add(time, x, y, r, Math.hypot(vx, vy));
 		}
 		
+		if (time > 0 && time - calcDelay < 0) {
+			r = presets.getDepartureRadius();
+		}
+		
 		vx += ax * calcDelay;
 		vy += ay * calcDelay;
 		
@@ -120,6 +124,7 @@ public class SatelliteSimulator extends Simulator {
 		super.finish();
 		Platform.runLater( () -> {
 			Satellite.getInstance().getController().finish(points);
+			Satellite.getInstance().getController().newAttempt(presets, points);
 			if (endTimeReached) {
 				Satellite.getInstance().getController().setSuccesfull(succesfullSimulation);
 			}

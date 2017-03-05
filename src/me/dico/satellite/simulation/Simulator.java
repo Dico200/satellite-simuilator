@@ -10,13 +10,17 @@ public abstract class Simulator {
 	public Simulator() {
 		this.ticking = true;
 		
-		simulator = new Thread( () -> {
-			try {
-				while (ticking)				
-					tick();
-			} catch (Exception e) {
-				log("An exception has occurred: " + e);
-				throw e;
+		simulator = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					while (ticking)				
+						tick();
+				} catch (Exception e) {
+					log("An exception has occurred: " + e);
+					throw e;
+				}
+				
 			}
 		});
 	}

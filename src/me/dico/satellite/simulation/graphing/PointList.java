@@ -1,5 +1,6 @@
 package me.dico.satellite.simulation.graphing;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 import javafx.collections.ObservableList;
@@ -7,14 +8,13 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import me.dico.satellite.Satellite;
 
-@SuppressWarnings("serial")
-public class PointList extends LinkedList<Point> {
-	
-	private CanvasGrapher grapher = Satellite.getInstance().getGrapher();
+public class PointList extends LinkedList<Point> implements Serializable {
+
+	private static final long serialVersionUID = -2244840585950814308L;
 	
 	public void add(double t, double x, double y, double r, double v) {
 		super.add(new Point(t, x, y, r, v));
-		grapher.drawPoint(x, y);
+		Satellite.drawPoint(x, y);
 	}
 	
 	public boolean pushToChart(LineChart<Number, Number> chart, ChartType type) {
