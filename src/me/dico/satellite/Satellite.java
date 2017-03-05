@@ -9,7 +9,7 @@ import me.dico.satellite.simulation.graphing.CanvasGrapher;
 import me.dico.satellite.utils.Logger;
 
 public class Satellite extends Application {
-
+    
     private static Satellite instance;
     
     private Logger logger;
@@ -18,33 +18,32 @@ public class Satellite extends Application {
     
     private Stage stage;
     private Scene simulatorScene, menuScene;
-
+    
     public Satellite() {
         logger = new Logger("Satellite");
         logger.setDebugging(true);
         instance = this;
     }
-
+    
     @Override
     public void start(Stage stage) throws Exception {
-    	stage.setTitle("Satellite Game");
-    	this.stage = stage;
-    	this.simulatorScene = new Scene(FXMLLoader.load(getClass().getResource("/me/dico/satellite/fxml/simulator.fxml")), 800, 650);
-    	this.menuScene = new Scene(FXMLLoader.load(getClass().getResource("/me/dico/satellite/fxml/menu.fxml")), 600, 500);
-    	
-    	stage.setScene(simulatorScene);
+        stage.setTitle("Satellite Game");
+        this.stage = stage;
+        this.simulatorScene = new Scene(FXMLLoader.load(getClass().getResource("/me/dico/satellite/fxml/simulator.fxml")), 800, 650);
+        this.menuScene = new Scene(FXMLLoader.load(getClass().getResource("/me/dico/satellite/fxml/menu.fxml")), 600, 500);
+        
+        stage.setScene(simulatorScene);
         stage.show();
         
     }
-
+    
     public static void main(String[] args) {
         Application.launch(args);
     }
-
+    
     public void log(String string) {
         logger.debug(string);
     }
-    
     
     
     // Getters and setters
@@ -52,37 +51,37 @@ public class Satellite extends Application {
     public static Satellite getInstance() {
         return instance;
     }
-
+    
     public Logger getLogger() {
         return logger;
     }
     
     public CanvasGrapher getGrapher() {
-    	return grapher;
+        return grapher;
     }
     
     public Stage getPrimaryStage() {
-    	return stage;
+        return stage;
     }
     
     public Scene getSimulatorScene() {
-    	return simulatorScene;
+        return simulatorScene;
     }
     
     public Scene getMenuScene() {
-    	return menuScene;
+        return menuScene;
     }
     
     public SimulationController getController() {
-    	return controller;
+        return controller;
     }
     
     public void setController(SimulationController controller) {
-    	this.controller = controller;
+        this.controller = controller;
     }
     
     public void setGrapher(CanvasGrapher grapher) {
-    	this.grapher = grapher;
+        this.grapher = grapher;
     }
     
 }

@@ -5,6 +5,7 @@
     -fx-background-color: linear-gradient(#61a2b1, #2A5058);
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
 }
+
 .button:hover {
     -fx-background-color: linear-gradient(#2A5058, #61a2b1);
 }
@@ -16,6 +17,7 @@
     -fx-background-color: linear-gradient(#b1a261, #58502A);
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
 }
+
 .toggle-button:hover {
     -fx-background-color: linear-gradient(#58502A, #b1a261);
 }
@@ -28,10 +30,10 @@
 }
 
 #simulator-settings-title {
-   -fx-font-size: 15px;
-   -fx-font-family: "Arial Black";
-   -fx-fill: #818181;
-   -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.7), 6, 0.0, 0, 2);
+    -fx-font-size: 15px;
+    -fx-font-family: "Arial Black";
+    -fx-fill: #818181;
+    -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.7), 6, 0.0, 0, 2);
 }
 
 .label {
@@ -49,6 +51,6 @@
 }
 
 .text-field.error {
-  -fx-text-box-border: red;
-  -fx-focus-color: red;
+    -fx-text-box-border: red;
+    -fx-focus-color: red;
 }
